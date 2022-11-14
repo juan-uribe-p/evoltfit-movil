@@ -35,13 +35,14 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your sexo!</Text>
-      <Text style={styles.titulo}>A continuación, haremos un fetch de Supabase:</Text>
+      <Text style={styles.titulo}>{"Tabla Prueba:"}</Text>
       {fetchError && (<Text>{fetchError}</Text>)}
           {datos && (
-            <View className="datos">
+            <View className="datos" style={styles.fetch}>
               {datos.map(dato => (
-                <Text key={dato.id} style={styles.fetch}>{dato.texto}</Text>
+                <Text key={dato.id}>
+                  {"Id " + dato.id + ": " + dato.texto}
+                  </Text>
               ))}
             </View>
           )}
